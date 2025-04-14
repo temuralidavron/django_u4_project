@@ -1,7 +1,13 @@
-from django.shortcuts import render
 
-# Create your views here.
+from django.shortcuts import render
+from .models import Blog
 
 
 def get_info(request):
-    return render(request,'blog/info.html')
+    blogs=Blog.objects.all()
+    context={
+        'u':blogs
+    }
+    return render(request,'blog/info.html',context)
+
+

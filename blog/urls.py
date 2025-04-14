@@ -4,4 +4,5 @@ from .views import get_info
 urlpatterns=[
     path('',get_info,name='info'),
 
+
 ]
